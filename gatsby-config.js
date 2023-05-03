@@ -25,5 +25,12 @@ module.exports = {
       "path": "./src/pages/"
     },
     __key: "pages"
+  },{
+    resolve: "gatsby-plugin-google-gtag",
+    options: {
+      trackingIds: [
+        "GA-XXXXXXXXX", // Replace with your Google Analytics tracking ID
+      ],
+    }
   }]
 };
