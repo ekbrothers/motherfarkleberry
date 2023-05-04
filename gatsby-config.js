@@ -6,7 +6,7 @@ module.exports = {
     title: `motherfarkleberry`,
     siteUrl: `https://www.yourdomain.tld`
   },
-  plugins: ["gatsby-plugin-styled-components", "gatsby-plugin-google-gtag", "gatsby-plugin-image", "gatsby-plugin-sitemap", {
+  plugins: ["gatsby-plugin-styled-components", "gatsby-plugin-image", "gatsby-plugin-sitemap", {
     resolve: 'gatsby-plugin-manifest',
     options: {
       "icon": "src/images/icon.png"
@@ -25,12 +25,14 @@ module.exports = {
       "path": "./src/pages/"
     },
     __key: "pages"
-  },{
-    resolve: "gatsby-plugin-google-gtag",
-    options: {
-      trackingIds: [
-        "GA-XXXXXXXXX", // Replace with your Google Analytics tracking ID
-      ],
-    }
-  }]
+  },
+  // {
+  //   resolve: "gatsby-plugin-google-gtag",
+  //   options: {
+  //     trackingIds: [
+  //       "GA-XXXXXXXXX", // Replace with your Google Analytics tracking ID
+  //     ],
+  //   }
+  // }
+]
 };
