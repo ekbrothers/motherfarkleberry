@@ -26,13 +26,12 @@ module.exports = {
     },
     __key: "pages"
   },
-  // {
-  //   resolve: "gatsby-plugin-google-gtag",
-  //   options: {
-  //     trackingIds: [
-  //       "GA-XXXXXXXXX", // Replace with your Google Analytics tracking ID
-  //     ],
-  //   }
-  // }
+  {
+    resolve: `gatsby-source-contentful`,
+    options: {
+      spaceId: process.env.CONTENTFUL_SPACE_ID,
+      accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+    },
+  }  
 ]
 };
