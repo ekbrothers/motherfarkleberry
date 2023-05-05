@@ -7,14 +7,14 @@ module.exports = {
     siteUrl: `https://www.yourdomain.tld`
   },
   plugins: [
-  //   {
-  //   resolve: 'gatsby-source-contentful',
-  //   options: {
-  //     "accessToken": "wImGXxFlOoMWZvlYe_8YK8ZwvPCG-LImDtguPk3Ezgo",
-  //     "spaceId": "bzobj76wzv6f",
-  //     "contentTypeFilter": {},
-  //   }
-  // }, 
+    {
+    resolve: 'gatsby-source-contentful',
+    options: {
+      "accessToken": "wImGXxFlOoMWZvlYe_8YK8ZwvPCG-LImDtguPk3Ezgo",
+      "spaceId": "bzobj76wzv6f",
+      "contentTypeFilter": {},
+    }
+  }, 
   "gatsby-plugin-image", "gatsby-plugin-sharp", "gatsby-transformer-sharp", "gatsby-plugin-styled-components", "gatsby-plugin-sitemap", {
     resolve: 'gatsby-plugin-manifest',
     options: {
