@@ -10,7 +10,8 @@ module.exports = {
     resolve: 'gatsby-source-contentful',
     options: {
       "accessToken": "Ea951yfGqTM3i3rA7Y0ac2kV4MBj7uFlBq1p1k0mMsM",
-      "spaceId": "h0l6prpyjirh"
+      "spaceId": "h0l6prpyjirh",
+      "useNameForId": "false"
     }
   }, "gatsby-plugin-image", "gatsby-plugin-sharp", "gatsby-transformer-sharp", "gatsby-plugin-styled-components", "gatsby-plugin-sitemap", {
     resolve: 'gatsby-plugin-manifest',
