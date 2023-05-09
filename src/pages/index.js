@@ -1,12 +1,13 @@
 import * as React from "react"
-import HeroImage from "../images/photo-1567268113943-0e88ef2e4883.avif" //replace with your actual hero image path
+import HeroImage from "../images/photo-1567268113943-0e88ef2e4883.avif"
 
 const pageStyles = {
   color: "#232129",
   fontFamily: "-apple-system, Roboto, sans-serif, serif",
-  maxWidth: '100%',
-  margin: '0 auto',
-  padding: '0 1rem',
+  margin: '0',
+  padding: '0',
+  width: '100%',
+  height: '100vh'
 }
 
 const sectionStyles = {
@@ -22,7 +23,8 @@ const flexContainer = {
 const IndexPage = () => {
   return (
     <main style={pageStyles}>
-      <section style={{ backgroundImage: `url(${HeroImage})`, backgroundSize: 'cover', height: '80vh', display: 'flex', justifyContent: 'center', alignItems: 'center', color: '#fff', textAlign: 'center', padding: '0 2rem' }}>
+      {/* Hero Section */}
+      <section style={{ backgroundImage: `url(${HeroImage})`, backgroundSize: 'cover', height: '100vh', width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center', color: '#fff', textAlign: 'center', padding: '0 2rem', margin: '0' }}>
         <div>
           <h1 style={{ fontSize: '2rem' }}>Nurture Nature with Native Plants</h1>
           <p>Providing Kentucky with the highest quality native plants for over 20 years</p>
