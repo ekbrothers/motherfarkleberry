@@ -1,5 +1,6 @@
 import * as React from "react"
 import HeroImage from "../images/photo-1567268113943-0e88ef2e4883.avif"
+import '../styles/global.css'
 
 const pageStyles = {
   color: "#232129",
