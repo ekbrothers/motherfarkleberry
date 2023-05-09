@@ -1,5 +1,5 @@
 import * as React from "react"
-import HeroImage from "../images/hero.jpg" //replace with your actual hero image path
+import HeroImage from "../images/photo-1567268113943-0e88ef2e4883.avif" //replace with your actual hero image path
 
 const pageStyles = {
   color: "#232129",
