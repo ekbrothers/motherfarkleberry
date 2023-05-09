@@ -1,4 +1,5 @@
 import * as React from "react"
+import HeroImage from "../images/hero.jpg" //replace with your actual hero image path
 
 const pageStyles = {
   color: "#232129",
@@ -6,85 +7,41 @@ const pageStyles = {
   fontFamily: "-apple-system, Roboto, sans-serif, serif",
 }
 
-const heroStyles = {
-  backgroundImage: "url('/path/to/hero/image.jpg')",
-  backgroundSize: "cover",
-  backgroundPosition: "center",
-  height: 500,
-  display: "flex",
-  justifyContent: "center",
-  alignItems: "center",
+const IndexPage = () => {
+  return (
+    <main style={pageStyles}>
+      <section style={{ backgroundImage: `url(${HeroImage})`, backgroundSize: 'cover', height: '80vh', display: 'flex', justifyContent: 'center', alignItems: 'center', color: '#fff', textAlign: 'center', padding: '0 2rem' }}>
+        <div>
+          <h1>Nurture Nature with Native Plants</h1>
+          <p>Providing Kentucky with the highest quality native plants for over 20 years</p>
+        </div>
+      </section>
+      <section style={{ padding: '2rem' }}>
+        <h2>Our Offerings</h2>
+        <p>Our store offers a variety of native plants perfect for your garden, backyard, or landscaping project. Plus, we provide expert consultation services to ensure your plants thrive in their new home.</p>
+      </section>
+      <section style={{ padding: '2rem' }}>
+        <h2>Why Plant Native</h2>
+        <p>Planting native is good for our local environment and even better for you. Not only does it support local wildlife and conserve water, but native plants are also naturally adapted to our climate, making them easier to care for and maintain.</p>
+      </section>
+      <section style={{ padding: '2rem', display: 'flex', justifyContent: 'space-between' }}>
+        <div>
+          <h3>Locally Grown</h3>
+          <p>All our plants are grown right here in Kentucky, ensuring they're perfectly suited for local conditions.</p>
+        </div>
+        <div>
+          <h3>Pesticide-Free</h3>
+          <p>We believe in natural growth. That's why we guarantee that our plants are grown without the use of harmful pesticides.</p>
+        </div>
+        <div>
+          <h3>Hand-Picked for Quality</h3>
+          <p>Each plant we sell is hand-picked by our expert staff for its health and vitality. You can trust you're getting the best.</p>
+        </div>
+      </section>
+    </main>
+  )
 }
 
-const heroTitleStyles = {
-  fontSize: "4rem",
-  fontWeight: 700,
-  color: "#fff",
-  textAlign: "center",
-  textShadow: "1px 1px #000",
-}
+export default IndexPage
 
-const aboutStyles = {
-  display: "flex",
-  flexDirection: "column",
-  alignItems: "center",
-  marginTop: 80,
-}
-
-const aboutTitleStyles = {
-  fontSize: "3rem",
-  fontWeight: 700,
-  marginBottom: 40,
-}
-
-const aboutTextStyles = {
-  maxWidth: 800,
-  marginBottom: 40,
-  fontSize: "1.2rem",
-  lineHeight: 1.5,
-}
-
-const ctaButtonStyles = {
-  padding: "12px 24px",
-  fontSize: "1.2rem",
-  fontWeight: 700,
-  backgroundColor: "#008000",
-  color: "#fff",
-  border: "none",
-  borderRadius: 4,
-  cursor: "pointer",
-  transition: "background-color 0.2s ease-in-out",
-}
-
-const ctaButtonHoverStyles = {
-  backgroundColor: "#006600",
-}
-
-const qualityStyles = {
-  display: "flex",
-  justifyContent: "space-around",
-  marginTop: 80,
-}
-
-const qualityColumnStyles = {
-  display: "flex",
-  flexDirection: "column",
-  alignItems: "center",
-  textAlign: "center",
-  maxWidth: 300,
-}
-
-const qualityIconStyles = {
-  width: 100,
-  height: 100,
-  marginBottom: 20,
-}
-
-const qualityTitleStyles = {
-  fontSize: "2rem",
-  fontWeight: 700,
-  marginBottom: 20,
-}
-
-const qualityTextStyles = {
-  fontSize: "1.2rem",
+export const Head = () => <title>Home Page</title>
