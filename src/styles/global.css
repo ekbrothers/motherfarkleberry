@@ -9,3 +9,8 @@ body {
     font-family: "margin";
     src: url("../fonts/margin.otf") format("opentype");
   }
+
+@font-face {
+font-family: "Gill Sans";
+src: url("../fonts/gill_sans.ttf") format("opentype");
+}
