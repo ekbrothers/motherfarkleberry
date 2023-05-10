@@ -24,39 +24,40 @@ const flexContainer = {
 const heroSectionStyles = {
   backgroundImage: `url(${HeroImage})`,
   backgroundSize: 'cover',
-  height: '100vh',
+  height: '40vh',
   width: '100%',
   display: 'flex',
   alignItems: 'flex-start',
   color: '#fff',
   textAlign: 'left',
-  padding: '10% 2rem 0 2rem',
+  padding: '7% 2rem 0 2rem',
   margin: '0',
 }
 
 const heroContentStyles = {
-  maxWidth: '25%', // Limit the width of the content
-  marginLeft: '20%', // Control the left margin to move the content
+  maxWidth: '23%', // Limit the width of the content
+  marginLeft: '22%', // Control the left margin to move the content
   // textAlign: 'justify',
   // wordWrap: 'break-word'
-  lineHeight: '1.3',
 }
 
 const heroHeaderStyles = {
-  fontSize: '2rem',
-  lineHeight: '0.7', // Adjust this value for desired line spacing of header
+  fontSize: '1.4rem',
+  lineHeight: '0.8', // Adjust this value for desired line spacing of header
+  fontWeight: 90
 }
 
 const heroTextStyles = {
+  fontSize: '0.6rem',
   lineHeight: '1.3', // Adjust this value for desired line spacing of text
   fontFamily: "Gill Sans",
 }
 
 const headerStyles = {
-  fontSize: '2.5rem',
+  fontSize: '1.3rem',
   color: '#232129',
   fontFamily: 'Margin',
-  fontWeight: 200, // Add this line
+  fontWeight: 100, // Add this line
   lineHeight: '1.3',
 }
 
@@ -71,6 +72,21 @@ const headerStyles = {
 const textStyles = {
   fontFamily: "Gill Sans, Roboto, sans-serif, serif",
   // other styles...
+}
+
+const iconStyles = {
+  width: '50px',
+  height: '50px',
+  marginBottom: '1rem', // Adjust as needed for spacing beneath icons
+}
+
+const columnStyles = {
+  display: 'flex',
+  flexDirection: 'column',
+  alignItems: 'center', // Center the content vertically
+  justifyContent: 'center', // Center the content horizontally
+  flexBasis: '33.33%', // Each column takes up a third of the available width
+  textAlign: 'center' // Center the text within each column
 }
 
 const IndexPage = () => {
@@ -92,15 +108,18 @@ const IndexPage = () => {
         <p style={textStyles}>Planting native is good for our local environment and even better for you. Not only does it support local wildlife and conserve water, but native plants are also naturally adapted to our climate, making them easier to care for and maintain.</p>
       </section>
       <section style={{ ...sectionStyles, ...flexContainer }}>
-        <div>
+        <div style={columnStyles}>
+          <img src="/assets/icon1.png" alt="Icon 1" style={iconStyles} />
           <h3 style={headerStyles}>Locally Grown</h3>
           <p style={textStyles}>All our plants are grown right here in Kentucky, ensuring they're perfectly suited for local conditions.</p>
         </div>
-        <div>
+        <div style={columnStyles}>
+          <img src="/assets/icon2.png" alt="Icon 2" style={iconStyles} />
           <h3 style={headerStyles}>Pesticide-Free</h3>
           <p style={textStyles}>We believe in natural growth. That's why we guarantee that our plants are grown without the use of harmful pesticides.</p>
         </div>
-        <div>
+        <div style={columnStyles}>
+          <img src="/assets/icon3.png" alt="Icon 3" style={iconStyles} />
           <h3 style={headerStyles}>Hand-Picked for Quality</h3>
           <p style={textStyles}>Each plant we sell is hand-picked by our expert staff for its health and vitality. You can trust you're getting the best.</p>
         </div>
