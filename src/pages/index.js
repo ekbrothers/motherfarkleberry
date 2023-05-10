@@ -4,7 +4,7 @@ import '../styles/global.css'
 
 const pageStyles = {
   color: "#232129",
-  fontFamily: "-apple-system, Roboto, sans-serif, serif",
+  fontFamily: "margin, Roboto, sans-serif, serif",
   margin: '0',
   padding: '0',
   width: '100%',
