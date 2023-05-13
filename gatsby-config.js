@@ -7,13 +7,13 @@ module.exports = {
     siteUrl: `https://www.yourdomain.tld`
   },
   plugins: [
-    {
-    resolve: 'gatsby-source-contentful',
-    options: {
-      "accessToken": "C2yXtHwRjFYX6L-cUAl0eCEtwk6irVigWMa4KDMF2Jk",
-      "spaceId": "ip5zzxd1xtin",
-    }
-  }, 
+  //   {
+  //   resolve: 'gatsby-source-contentful',
+  //   options: {
+  //     "accessToken": "wImGXxFlOoMWZvlYe_8YK8ZwvPCG-LImDtguPk3Ezgo",
+  //     "spaceId": "bzobj76wzv6f",
+  //   }
+  // }, 
   "gatsby-plugin-image", "gatsby-plugin-sharp", "gatsby-transformer-sharp", "gatsby-plugin-sitemap", {
     resolve: 'gatsby-plugin-manifest',
     options: {
