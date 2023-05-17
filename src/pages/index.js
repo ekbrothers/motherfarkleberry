@@ -2,7 +2,6 @@ import * as React from "react"
 import HeroImage from "../images/upupdowndownleftright_joe-pye_weed_shallow_depth_of_field_earth_86855f7b-2844-4a12-af08-b05c61d4783c.png"
 import './IndexPage.css'
 
-
 const IndexPage = () => {
   return (
     <main className="main">
