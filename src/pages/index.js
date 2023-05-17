@@ -1,6 +1,5 @@
 import * as React from "react"
 import HeroImage from "../images/upupdowndownleftright_joe-pye_weed_shallow_depth_of_field_earth_86855f7b-2844-4a12-af08-b05c61d4783c.png"
-import '../styles/global.css'
 import '../styles/IndexPage.css'
 
 const IndexPage = () => {
@@ -28,18 +27,18 @@ const IndexPage = () => {
           <p>All our plants are grown right here in Kentucky, ensuring they're perfectly suited for local conditions.</p>
         </div>
         <div className="column">
-          <img src="/assets/icon2.png" alt="Icon 2" />
-          <h3>Pesticide-Free</h3>
-          <p>We believe in natural growth. That's why we guarantee that our plants are grown without the use of harmful pesticides.</p>
-        </div>
-        <div className="column">
-          <img src="/assets/icon3.png" alt="Icon 3" />
-          <h3>Hand-Picked for Quality</h3>
-          <p>Each plant we sell is hand-picked by our expert staff for its health and vitality. You can trust you're getting the best.</p>
-        </div>
-      </section>
-    </main>
-  )
+        <img src="/assets/icon2.png" alt="Icon 2" />
+        <h3>Pesticide-Free</h3>
+        <p>We believe in natural growth. That's why we guarantee that our plants are grown without the use of harmful pesticides.</p>
+      </div>
+      <div className="column">
+        <img src="/assets/icon3.png" alt="Icon 3" />
+        <h3>Hand-Picked for Quality</h3>
+        <p>Each plant we sell is hand-picked by our expert staff for its health and vitality. You can trust you're getting the best.</p>
+      </div>
+    </section>
+  </main>
+)
 }
 
 export default IndexPage

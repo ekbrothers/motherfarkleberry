@@ -1,0 +1,67 @@
+/* IndexPage.css */
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.main {
+    color: #232129;
+    font-family: "margin, Roboto, sans-serif, serif";
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+  }
+  
+  .flex-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .hero-section {
+    background-size: cover;
+    /* background-position: center; */
+    background-repeat: no-repeat;
+    height: 40vh;
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    color: #fff;
+    text-align: left;
+    padding: 7% 2rem 0 2rem;
+    margin: 0;
+  }
+  
+  .hero-content {
+    max-width: 100%; /* Full width on mobile */
+    margin-left: 0; /* No margin on mobile */
+  }
+  
+  @media (min-width: 768px) {
+    /* Increase max width and add margin for larger screens */
+    .hero-content {
+      max-width: 23%;
+      margin-left: 22%;
+    }
+  }
+  
+  .column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-basis: 100%; /* Full width on mobile */
+    text-align: center;
+  }
+  
+  @media (min-width: 768px) {
+    /* Each column takes up a third of the available width on larger screens */
+    .column {
+      flex-basis: 33.33%;
+    }
+  }
+  
