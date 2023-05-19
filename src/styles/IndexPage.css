@@ -23,7 +23,7 @@ body {
 .hero-content {
   text-align: left; /* center the text */
   padding: 2rem; /* provide some padding around the text */
-  background: #f8f9fa; /* a background color to separate it from other sections */
+  /* background: #f8f9fa; a background color to separate it from other sections */
 }
 
 .hero-content h1 {
@@ -145,7 +145,7 @@ body {
 
 @media (min-width: 1024px) {
   .hero-section {
-    height: 40vh; /* height for large devices */
+    height: 34vh; /* height for large devices */
   }
   .hero-content h1 {
     font-size: 5em; /* font size for large devices */
