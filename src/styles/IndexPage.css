@@ -9,7 +9,7 @@ body {
 }
 
 .main {
-  font-family: Roboto, sans-serif, serif;
+  font-family: 'roboto', sans-serif, serif;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -20,19 +20,70 @@ body {
   margin: 0;
 }
 
+.hero-content {
+  text-align: left; /* center the text */
+  padding: 2rem; /* provide some padding around the text */
+  background: #f8f9fa; /* a background color to separate it from other sections */
+}
+
+.hero-content h1 {
+  font-family: 'margin', sans-serif;
+  font-size: 5em;
+  color: #212529; /* adjust colors to fit your new background */
+  border-radius: 15px; /* This makes the corners rounded. Adjust the pixel value as necessary. */
+  overflow: hidden; /* This makes sure that the content also follows the rounded corners */
+}
+
+.hero-content p {
+  font-family: 'Gill Sans', sans-serif;
+  color: #212529; /* adjust colors to fit your new background */
+}
+
+/* .hero-content p {
+  font-family: 'Gill Sans', sans-serif;
+  font-size: 1.2em; /* larger font size for readability 
+  line-height: 1.6; /* looser line height for readability 
+  color: #f8f9fa; /* slightly off-white for a modern touch 
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* text shadow for more depth
+} */
+
 .hero-section {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  background-image: url('../images/upupdowndownleftright_native_kentucky_plants_goldenrod_joe-pye__5b0abbe0-b1be-4bd2-a7f1-eedbf95ee5df.png');
+  width: 100vw;
+  height: 50vh; /* increased height */
   background-size: cover;
-  background-position: center;
+  background-position: top center;
   background-repeat: no-repeat;
+  /* background-attachment: fixed; */
+}
+
+.hero-section::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
-  height: 50vh;
-  color: #fff;
-  text-align: center;
-  padding: 2rem;
+  height: 100%;
+  /* background: rgba(0, 0, 0, 0.5); black overlay with 50% transparency */
+}
+
+.column img {
+  width: 100%; /* adjust as needed */
+  transition: transform 0.3s ease;
+}
+
+.column img:hover {
+  transform: scale(1.1);
+}
+
+/* Animate Button Transitions */
+.button {
+  /* ...button styles... */
+  transition: background-color 0.5s ease; /* creates a smooth transition effect */
+}
+
+.button:hover {
+  background-color: #007BFF; /* change to whatever color you prefer on hover */
 }
 
 .section {
@@ -47,15 +98,40 @@ body {
   align-items: center;
   width: 100%;
   padding: 2rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
 }
 
 .column {
   display: flex;
   flex-direction: column;
+  transition: transform 0.5s ease; /* adds a smooth transition effect */
   justify-content: center;
   align-items: center;
   text-align: center;
   margin: 1rem;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: box-shadow 0.3s ease;
+}
+
+.column:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.cta-button {
+  background-color: #ff7f00; /* or any color of your choice */
+  color: white;
+  padding: 1em 2em;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1em;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #ff5500; /* or any color of your choice */
 }
 
 @media (min-width: 768px) {
@@ -64,10 +140,17 @@ body {
   }
 
   .hero-section {
-    height: 70vh;
+    height: 40vh;
   }
 
   .column {
     margin: 2rem;
+  }
+}
+
+/* Responsive Design for .flex-container */
+@media (min-width: 768px) {
+  .flex-container {
+    grid-template-columns: repeat(3, 1fr); /* defines 3 columns of equal width */
   }
 }

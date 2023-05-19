@@ -1,17 +1,16 @@
 import * as React from "react"
-import HeroImage from "../images/upupdowndownleftright_joe-pye_weed_shallow_depth_of_field_earth_86855f7b-2844-4a12-af08-b05c61d4783c.png"
 import '../styles/IndexPage.css'
 
 const IndexPage = () => {
   return (
     <main className="main">
-      {/* Hero Section */}
-      <section className="hero-section" style={{ backgroundImage: `url(${HeroImage})` }}>
-        <div className="hero-content">
-          <h1>Nurture Nature with Native Plants</h1>
-          <p>Providing Kentucky with the highest quality native plants for over 20 years</p>
-        </div>
-      </section>
+    {/* Hero Section */}
+    <section className="hero-section">
+    </section>
+    <div className="hero-content">
+      <h1>Nurture Nature with Native Plants</h1>
+      <p>Providing Kentucky with the highest quality native plants for over 20 years</p>
+    </div>
       <section className="section">
         <h2>Our Offerings</h2>
         <p>Our store offers a variety of native plants perfect for your garden, backyard, or landscaping project. Plus, we provide expert consultation services to ensure your plants thrive in their new home.</p>
