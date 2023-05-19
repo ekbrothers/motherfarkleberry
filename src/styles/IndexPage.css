@@ -135,6 +135,24 @@ body {
 }
 
 @media (min-width: 768px) {
+  .hero-section {
+    height: 50vh; /* height for medium devices */
+  }
+  .hero-content h1 {
+    font-size: 3em; /* font size for medium devices */
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero-section {
+    height: 40vh; /* height for large devices */
+  }
+  .hero-content h1 {
+    font-size: 5em; /* font size for large devices */
+  }
+}
+
+/* @media (min-width: 768px) {
   .flex-container {
     flex-direction: row;
   }
@@ -149,8 +167,8 @@ body {
 }
 
 /* Responsive Design for .flex-container */
-@media (min-width: 768px) {
+/* @media (min-width: 768px) {
   .flex-container {
     grid-template-columns: repeat(3, 1fr); /* defines 3 columns of equal width */
-  }
-}
+  /* }
+} */
