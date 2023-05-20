@@ -1,7 +1,4 @@
-/* IndexPage.css */
-
-html,
-body {
+html, body {
   margin: 0;
   padding: 0;
   width: 100%;
@@ -20,75 +17,18 @@ body {
   margin: 0;
 }
 
-.hero-content {
-  text-align: left; /* center the text */
-  padding: 2rem; /* provide some padding around the text */
-  /* background: #f8f9fa; a background color to separate it from other sections */
+.section {
+  padding: 2rem;
+  text-align: center;
 }
-
-.hero-content h1 {
-  font-family: 'margin', sans-serif;
-  font-size: 5em;
-  color: #212529; /* adjust colors to fit your new background */
-  border-radius: 15px; /* This makes the corners rounded. Adjust the pixel value as necessary. */
-  overflow: hidden; /* This makes sure that the content also follows the rounded corners */
-}
-
-.hero-content p {
-  font-family: 'Gill Sans', sans-serif;
-  color: #212529; /* adjust colors to fit your new background */
-}
-
-/* .hero-content p {
-  font-family: 'Gill Sans', sans-serif;
-  font-size: 1.2em; /* larger font size for readability 
-  line-height: 1.6; /* looser line height for readability 
-  color: #f8f9fa; /* slightly off-white for a modern touch 
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* text shadow for more depth
-} */
 
 .hero-section {
   background-image: url('../images/upupdowndownleftright_native_kentucky_plants_goldenrod_joe-pye__5b0abbe0-b1be-4bd2-a7f1-eedbf95ee5df.png');
   width: 100vw;
-  height: 50vh; /* increased height */
+  height: 50vh;
   background-size: cover;
   background-position: top center;
   background-repeat: no-repeat;
-  /* background-attachment: fixed; */
-}
-
-.hero-section::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  /* background: rgba(0, 0, 0, 0.5); black overlay with 50% transparency */
-}
-
-.column img {
-  width: 100%; /* adjust as needed */
-  transition: transform 0.3s ease;
-}
-
-.column img:hover {
-  transform: scale(1.1);
-}
-
-/* Animate Button Transitions */
-.button {
-  /* ...button styles... */
-  transition: background-color 0.5s ease; /* creates a smooth transition effect */
-}
-
-.button:hover {
-  background-color: #007BFF; /* change to whatever color you prefer on hover */
-}
-
-.section {
-  padding: 2rem;
-  text-align: center;
 }
 
 .flex-container {
@@ -106,7 +46,7 @@ body {
 .column {
   display: flex;
   flex-direction: column;
-  transition: transform 0.5s ease; /* adds a smooth transition effect */
+  transition: transform 0.5s ease;
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -119,8 +59,39 @@ body {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
 
+.column img {
+  width: 100%;
+  transition: transform 0.3s ease;
+}
+
+.column img:hover {
+  transform: scale(1.1);
+}
+
+.content-section {
+  display: flex; 
+  justify-content: space-between; 
+  padding: 0 2rem;
+}
+
+.content-text {
+  flex: 1;
+  font-family: 'margin', sans-serif;
+  font-size: 3em;
+  padding-right: 1em;
+}
+
+.small-image {
+  width: 35vw;
+  height: auto;
+}
+
+.content-image {
+  flex: 1;
+}
+
 .cta-button {
-  background-color: #ff7f00; /* or any color of your choice */
+  background-color: #ff7f00;
   color: white;
   padding: 1em 2em;
   text-align: center;
@@ -131,68 +102,25 @@ body {
 }
 
 .cta-button:hover {
-  background-color: #ff5500; /* or any color of your choice */
+  background-color: #ff5500;
 }
 
 @media (min-width: 768px) {
   .hero-section {
-    height: 50vh; /* height for medium devices */
+    height: 50vh;
   }
-  .hero-content h1 {
-    font-size: 3em; /* font size for medium devices */
+
+  .content-text {
+    font-size: 3em;
   }
-}
-
-.content-section {
-  display: flex; 
-  justify-content: space-between; 
-  padding: 0 2rem; /* Adjust the padding values as needed */
-}
-
-.content-text {
-  flex: 1;
-  font-family: 'margin', sans-serif;
-
-  font-size: 3em;
-  padding-right: 1em; /* Add some space between the text and the image */
-}
-
-.small-image {
-  width: 35vw; /* Adjust this value according to your needs */
-  height: auto; /* This will maintain the aspect ratio of the image */
-}
-
-.content-image {
-  flex: 1;
-  /* ...add styles for the image here... */
 }
 
 @media (min-width: 1024px) {
   .hero-section {
-    height: 34vh; /* height for large devices */
+    height: 34vh;
   }
-  .hero-content h1 {
-    font-size: 5em; /* font size for large devices */
+
+  .content-text {
+    font-size: 5em;
   }
 }
-
-/* @media (min-width: 768px) {
-  .flex-container {
-    flex-direction: row;
-  }
-
-  .hero-section {
-    height: 40vh;
-  }
-
-  .column {
-    margin: 2rem;
-  }
-}
-
-/* Responsive Design for .flex-container */
-/* @media (min-width: 768px) {
-  .flex-container {
-    grid-template-columns: repeat(3, 1fr); /* defines 3 columns of equal width */
-  /* }
-} */
