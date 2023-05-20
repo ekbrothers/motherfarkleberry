@@ -143,6 +143,30 @@ body {
   }
 }
 
+.content-section {
+  display: flex; 
+  justify-content: space-between; 
+  padding: 0 2rem; /* Adjust the padding values as needed */
+}
+
+.content-text {
+  flex: 1;
+  font-family: 'margin', sans-serif;
+
+  font-size: 3em;
+  padding-right: 1em; /* Add some space between the text and the image */
+}
+
+.small-image {
+  width: 35vw; /* Adjust this value according to your needs */
+  height: auto; /* This will maintain the aspect ratio of the image */
+}
+
+.content-image {
+  flex: 1;
+  /* ...add styles for the image here... */
+}
+
 @media (min-width: 1024px) {
   .hero-section {
     height: 34vh; /* height for large devices */

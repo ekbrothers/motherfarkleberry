@@ -1,16 +1,21 @@
 import * as React from "react"
 import '../styles/IndexPage.css'
+import ImageName from '../images/upupdowndownleftright_native_kentucky_plants_in_the_shape_of_an_ab4faea1-9981-4d6a-91bb-1b4bac075c55.png';
+
 
 const IndexPage = () => {
   return (
     <main className="main">
     {/* Hero Section */}
-    <section className="hero-section">
-    </section>
-    <div className="hero-content">
-      <h1>Nurture Nature with Native Plants</h1>
-      <p>Providing Kentucky with the highest quality native plants for over 20 years</p>
+    <section className="hero-section"></section>
+    <section className="content-section">
+      <div className="content-text">
+        <h1>Mother Farkleberry's Native Wonders</h1>
+      </div>
+      <div className="content-image">
+      <img className="small-image" src={ImageName} alt="description" />
     </div>
+    </section>
       <section className="section">
         <h2>Our Offerings</h2>
         <p>Our store offers a variety of native plants perfect for your garden, backyard, or landscaping project. Plus, we provide expert consultation services to ensure your plants thrive in their new home.</p>
