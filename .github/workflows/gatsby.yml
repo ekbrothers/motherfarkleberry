@@ -95,3 +95,16 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v2
+audit:
+  needs: deploy # Ensures this job runs after your deployment job
+  runs-on: ubuntu-latest
+  steps:
+    - name: Checkout
+      uses: actions/checkout@v3
+    - name: Audit URLs using Lighthouse
+      uses: treosh/lighthouse-ci-action@v8
+      with:
+        urls: |
+          ${{ steps.deployment.outputs.page_url }}
+        uploadArtifacts: true # Saves the Lighthouse report as a workflow artifact
+        temporaryPublicStorage: true # Uploads the report to the Lighthouse servers
