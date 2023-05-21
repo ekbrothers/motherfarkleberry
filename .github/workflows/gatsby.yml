@@ -104,7 +104,6 @@ jobs:
       - name: Audit URLs using Lighthouse
         uses: treosh/lighthouse-ci-action@v8
         with:
-          urls: |
-            ${{ steps.deployment.outputs.page_url }}
+          urls: ${{ steps.deployment.outputs.page_url }}
           uploadArtifacts: true # Saves the Lighthouse report as a workflow artifact
           temporaryPublicStorage: true # Uploads the report to the Lighthouse servers
