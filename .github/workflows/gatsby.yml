@@ -102,8 +102,9 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
       - name: Audit URLs using Lighthouse
-        uses: treosh/lighthouse-ci-action@v8
+        uses: treosh/lighthouse-ci-action@v10
         with:
-          urls: https://www.motherfarkleberry.com
+          urls: | 
+            https://www.motherfarkleberry.com/
           uploadArtifacts: true # Saves the Lighthouse report as a workflow artifact
           temporaryPublicStorage: true # Uploads the report to the Lighthouse servers
