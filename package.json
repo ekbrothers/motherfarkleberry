@@ -1,34 +1,55 @@
 {
-  "name": "motherfarkleberry",
-  "version": "1.0.0",
+  "name": "gatsby-starter-landing-page",
   "private": true,
-  "description": "motherfarkleberry",
-  "author": "Evan Brothers",
-  "keywords": [
-    "gatsby"
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "workspaces": [
+    ".",
+    "gatsby-theme-landing-page"
   ],
+  "version": "1.0.0",
+  "description": "Gatsby landing page starter built with Contentful",
   "scripts": {
-    "develop": "gatsby develop",
     "start": "gatsby develop",
+    "start:refresh": "ENABLE_GATSBY_REFRESH_ENDPOINT=true yarn start",
+    "refresh": "curl -X POST http://localhost:8000/__refresh",
+    "setup": "node .contentful/setup.js",
+    "gatsby-provision": "gatsby-provision-contentful --contentful-data-path='./.contentful/landing-page-model-and-content.json'",
     "build": "gatsby build",
     "serve": "gatsby serve",
-    "clean": "gatsby clean"
+    "clean": "gatsby clean",
+    "prettier": "prettier --write .",
+    "prepare": "husky install"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gatsbyjs/gatsby-starter-landing-page.git"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gatsbyjs/gatsby-starter-landing-page/issues"
+  },
+  "homepage": "https://github.com/gatsbyjs/gatsby-starter-landing-page#readme",
   "dependencies": {
-    "@mdx-js/react": "^2.3.0",
-    "babel-plugin-styled-components": "^2.1.1",
-    "gatsby": "^5.9.0",
-    "gatsby-plugin-image": "^3.10.0",
-    "gatsby-plugin-manifest": "^5.9.0",
-    "gatsby-plugin-mdx": "^5.9.0",
-    "gatsby-plugin-sharp": "^5.10.0",
-    "gatsby-plugin-sitemap": "^6.9.0",
-    "gatsby-plugin-styled-components": "^6.9.0",
-    "gatsby-source-contentful": "^8.9.1",
-    "gatsby-source-filesystem": "^5.10.0",
-    "gatsby-transformer-sharp": "^5.10.0",
+    "@fontsource/inter": "^4.5.1",
+    "gatsby": "^5.0.0",
+    "gatsby-plugin-manifest": "^5.0.0",
+    "gatsby-source-contentful": "^8.0.0",
+    "gatsby-theme-landing-page": "1.0.2",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "styled-components": "^5.3.10"
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "chalk": "^4.0.0",
+    "contentful-import": "^8.5.21",
+    "gatsby-provision-contentful": "^0.0.5",
+    "husky": ">=6",
+    "inquirer": "^8.2.0",
+    "lint-staged": ">=10",
+    "prettier": "^2.5.0"
+  },
+  "lint-staged": {
+    "*.{js,css,md}": "prettier --write"
   }
 }

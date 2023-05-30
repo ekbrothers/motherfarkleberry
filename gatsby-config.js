@@ -1,37 +1,49 @@
-/**
- * @type {import('gatsby').GatsbyConfig}
- */
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+});
+
+const contentfulConfig = {
+  spaceId: process.env.CONTENTFUL_SPACE_ID,
+  accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+};
+
+if (process.env.CONTENTFUL_HOST) {
+  contentfulConfig.host = process.env.CONTENTFUL_HOST;
+  contentfulConfig.accessToken = process.env.CONTENTFUL_PREVIEW_ACCESS_TOKEN;
+}
+
+const { spaceId, accessToken } = contentfulConfig;
+
+if (!spaceId || !accessToken) {
+  throw new Error(
+    "Contentful spaceId and the access token need to be provided. Received: " +
+      JSON.stringify(contentfulConfig)
+  );
+}
+
+// starter config
 module.exports = {
   siteMetadata: {
-    title: `motherfarkleberry`,
-    siteUrl: `https://www.yourdomain.tld`
+    title: "Gatsby Starter Landing Page",
+    description:
+      "Create custom landing pages using Gatsby and Contentful with this Gatsby Starter",
   },
   plugins: [
-  //   {
-  //   resolve: 'gatsby-source-contentful',
-  //   options: {
-  //     "accessToken": "wImGXxFlOoMWZvlYe_8YK8ZwvPCG-LImDtguPk3Ezgo",
-  //     "spaceId": "bzobj76wzv6f",
-  //   }
-  // }, 
-  "gatsby-plugin-image", "gatsby-plugin-sharp", "gatsby-transformer-sharp", "gatsby-plugin-sitemap", {
-    resolve: 'gatsby-plugin-manifest',
-    options: {
-      "icon": "src/images/icon.png"
-    }
-  }, "gatsby-plugin-mdx", {
-    resolve: 'gatsby-source-filesystem',
-    options: {
-      "name": "images",
-      "path": "./src/images/"
+    {
+      resolve: `gatsby-theme-landing-page`,
+      options: contentfulConfig,
     },
-    __key: "images"
-  }, {
-    resolve: 'gatsby-source-filesystem',
-    options: {
-      "name": "pages",
-      "path": "./src/pages/"
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Gatsby Starter Landing Page`,
+        short_name: `Gatsby Starter Landing Page`,
+        start_url: `/`,
+        background_color: `#fff`,
+        theme_color: `#000`,
+        display: `browser`,
+        icon: `src/assets/gatsby-monogram.png`,
+      },
     },
-    __key: "pages"
-  }]
+  ],
 };
