@@ -152,7 +152,7 @@ For more information, see the theme's [README.md][theme readme].
 
 ## Adding a layout
 
-By default, the theme's landing pages do not include a wrapping layout. This is to allow you customize the header, footer and other wrapping content to match the rest of your site.
+By efault, the theme's landing pages do not include a wrapping layout. This is to allow you customize the header, footer and other wrapping content to match the rest of your site.
 This starter shadows the theme's layout with the `src/gatsby-theme-landing-page/components/layout.js` file, which renders the `src/components/layout.js` file. Edit this file to customize the shared layout for all landing pages.
 
 ```js
