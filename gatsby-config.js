@@ -42,7 +42,7 @@ module.exports = {
         background_color: `#fff`,
         theme_color: `#000`,
         display: `browser`,
-        icon: `src/assets/gatsby-monogram.png`,
+        icon: `src/assets/instagram-logo.png`,
       },
     },
   ],

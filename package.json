@@ -33,6 +33,7 @@
   "homepage": "https://github.com/gatsbyjs/gatsby-starter-landing-page#readme",
   "dependencies": {
     "@fontsource/inter": "^4.5.1",
+    "@mui/x-data-grid": "^6.7.0",
     "gatsby": "^5.0.0",
     "gatsby-plugin-manifest": "^5.0.0",
     "gatsby-source-contentful": "^8.0.0",
